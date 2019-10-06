@@ -1,7 +1,7 @@
 /* eslint no-process-env: 0 */
 require('dotenv').config();
 
-const environment = ['DATABASE', 'PORT'];
+const environment = ['DATABASE', 'PORT', 'BASE_URL'];
 
 environment.forEach(name => {
   if (!process.env[name]) {
@@ -11,5 +11,6 @@ environment.forEach(name => {
 
 module.exports = {
   DATABASE: process.env.DATABASE,
-  PORT: process.env.PORT
+  PORT: process.env.PORT,
+  BASE_URL: process.env.BASE_URL
 };
